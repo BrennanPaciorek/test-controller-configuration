@@ -1,0 +1,11 @@
+---
+# Test presence of infra.controller_configuration collection
+# Should be practically a no-op
+- name: Get stats
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Call dispatch role
+      ansible.builtin.include_role:
+        name: infra.controller_configuration.dispatch
+
